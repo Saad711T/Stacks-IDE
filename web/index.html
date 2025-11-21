@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STACKSIDE</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="tabs" id="tabs"></div>
+    <button class="btn" id="newFileBtn">New</button>
+    <button class="btn" id="saveBtn">Save</button>
+    <button class="btn" id="downloadBtn">Download</button>
+    <button class="btn" id="runBtn" title="Run (HTML/JS)">Run ▶</button>
+    <button class="btn" id="themeBtn">Toggle Theme</button>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h3>Files</h3>
+      <ul class="files" id="fileList"></ul>
+    </aside>
+    <main>
+      <div id="editor"></div>
+    </main>
+  </div>
+
+  <!-- Create File Modal -->
+  <div id="newFileModal" class="modal">
+    <div class="modal-box">
+      <h2>Create New File</h2>
+
+      <label>File name:</label>
+      <input id="newFileName" type="text" placeholder="example" />
+
+      <label>Extension:</label>
+      <select id="newFileExt">
+        <option value="js">.js</option>
+        <option value="html">.html</option>
+        <option value="css">.css</option>
+        <option value="md">.md</option>
+        <option value="json">.json</option>
+        <option value="py">.py</option>
+        <option value="cpp">.cpp</option>
+        <option value="java">.java</option>
+        <option value="txt">.txt</option>
+      </select>
+
+      <div class="modal-actions">
+        <button class="btn" id="createFileBtn">Create</button>
+        <button class="btn" id="cancelFileBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="statusbar">
+    <div class="left">
+      <span id="cursor">Ln 1, Col 1</span>
+      <span id="lang">javascript</span>
+    </div>
+    <div class="right">
+      <span id="encoding">UTF-8</span>
+      <span id="eol">LF</span>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

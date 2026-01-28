@@ -132,3 +132,20 @@
       justify-content: flex-end;
       gap: 10px;
     }
+
+
+  #terminal {
+  height: 160px;
+  background: #0e0e0e;
+  border-top: 1px solid #333;
+  padding: 8px;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+  color: #d4d4d4;
+  overflow-y: auto;
+}
+
+.terminal-log { color: #d4d4d4; }
+.terminal-error { color: #f44747; }
+.terminal-warn { color: #cca700; }
+.terminal-info { color: #4fc1ff; }
